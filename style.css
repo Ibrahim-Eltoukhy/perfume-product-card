@@ -1,0 +1,126 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --bg-color: hsl(30, 38%, 92%);
+  --btn-color: #3c8067;
+  --text-color: #6c7289;
+  --head-color: #161d24;
+  --margin-bottom: 3rem;
+}
+
+html {
+  font-size: 62.5%;
+}
+/*
+ font-family: 'Fraunces', serif;
+font-family: 'Montserrat', sans-serif; 
+*/
+
+body {
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  font-family: "Montserrat", sans-serif;
+}
+main {
+  max-width: 65rem;
+  margin: 7rem auto;
+}
+.card {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.5rem;
+
+  border-radius: 10px;
+  background-color: #fff;
+  overflow: hidden;
+}
+.mobile {
+  display: none;
+}
+
+.perfume-photo {
+  width: 100%;
+  height: 100%;
+}
+
+/* product details */
+.product-details {
+  padding: 3rem;
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+}
+.subtitle {
+  font-size: 1.4rem;
+  text-transform: uppercase;
+  letter-spacing: 0.5rem;
+  /* margin-bottom: 3rem; */
+}
+.product-name {
+  font-family: "Fraunces", serif;
+  font-weight: 700;
+  font-size: 4rem;
+  /* margin-bottom: 4rem; */
+  color: var(--head-color);
+}
+.product-text {
+  font-size: 1.4rem;
+  font-weight: 500;
+  /* margin-bottom: 3rem; */
+  line-height: 1.6;
+}
+
+.price {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.current-price {
+  color: var(--btn-color);
+  font-family: "Fraunces", serif;
+  font-weight: 700;
+  font-size: 4rem;
+}
+
+.old-price {
+  font-size: 1.4rem;
+  font-weight: 500;
+  text-decoration: line-through;
+}
+
+.btn {
+  border: none;
+  background-color: var(--btn-color);
+  font-family: "Montserrat", sans-serif;
+  color: #fff;
+  width: 100%;
+  padding: 1rem 2rem;
+  border-radius: 1rem;
+  cursor: pointer;
+}
+.btn:hover {
+  background-color: #295646;
+}
+@media only screen and (max-width: 600px) {
+  .card {
+    grid-template-columns: 1fr;
+  }
+  .mobile {
+    display: block;
+  }
+  .desktop {
+    display: none;
+  }
+  main {
+    max-width: 90%;
+    margin: 3rem auto;
+  }
+  .product-details {
+    padding: 2rem;
+    gap: 1.2rem;
+  }
+}
