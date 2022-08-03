@@ -15,10 +15,6 @@
 html {
   font-size: 62.5%;
 }
-/*
- font-family: 'Fraunces', serif;
-font-family: 'Montserrat', sans-serif; 
-*/
 
 body {
   background-color: var(--bg-color);
